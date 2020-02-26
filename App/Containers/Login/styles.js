@@ -1,34 +1,34 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
   container: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginHorizontal: 20
+    marginHorizontal: 20,
   },
   formContainer: {
     marginTop: 300,
     alignSelf: 'center',
     width: '100%',
   },
-  formInput: { 
+  formInput: {
     width: '100%',
     alignItems: 'flex-start',
     marginBottom: 10,
     borderBottomWidth: 1,
-    borderColor: 'gray'
+    borderColor: 'gray',
   },
   btnContainer: {
     width: '100%',
-    alignItems: 'center'
+    alignItems: 'center',
   },
-  btnStyle: { 
-    height: 45, 
+  btnStyle: {
+    height: 45,
     width: '98%',
-    alignItems: 'center', 
-    justifyContent: 'center', 
+    alignItems: 'center',
+    justifyContent: 'center',
     backgroundColor: 'blue',
-    borderRadius: 5
+    borderRadius: 5,
   },
   signUpContainer: {
     marginTop: 20,
@@ -38,7 +38,6 @@ export default StyleSheet.create({
     position: 'absolute',
     bottom: 35,
     flexDirection: 'row',
-    alignSelf: 'center'
-
-  }
+    alignSelf: 'center',
+  },
 })
