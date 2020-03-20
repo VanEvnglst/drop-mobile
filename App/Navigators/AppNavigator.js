@@ -1,8 +1,9 @@
 import { createAppContainer, createStackNavigator } from 'react-navigation'
-import { fromLeft, fadeIn } from 'react-navigation-transitions'
+import { fromRight, fadeIn } from 'react-navigation-transitions'
 
-import LoginScreen from 'App/Containers/Login/LoginScreen'
-import SplashScreen from 'App/Containers/SplashScreen/SplashScreen'
+import LoginScreen from 'App/Containers/Login/'
+import HomeScreen from 'App/Containers/HomeScreen/'
+import SplashScreen from 'App/Containers/SplashScreen/'
 
 const handleCustomTransition = ({ scenes }) => {
   const prevScene = scenes[scenes.length - 2]
@@ -16,13 +17,14 @@ const handleCustomTransition = ({ scenes }) => {
   ) {
     return fadeIn()
   }
-  return fromLeft()
+  return fromRight()
 }
 
 const StackNavigator = createStackNavigator(
   {
     SplashScreen: SplashScreen,
     MainScreen: LoginScreen,
+    HomeScreen: HomeScreen,
   },
   {
     initialRouteName: 'SplashScreen',

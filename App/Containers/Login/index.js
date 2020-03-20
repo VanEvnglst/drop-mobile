@@ -6,6 +6,9 @@ import Button from 'App/Components/Button'
 import styles from './styles'
 
 const LoginScreen = (props) => {
+  const {
+    navigation: { navigate },
+  } = props
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.logoContainer}>
@@ -14,7 +17,7 @@ const LoginScreen = (props) => {
       <View style={styles.formContainer}>
         <Input label="Email" placeholder="Email" />
         <Input label="Password" placeholder="Password" />
-        <Button label="Sign in" />
+        <Button onClick={() => navigate('HomeScreen')} label="Sign in" />
       </View>
       <View style={styles.footerContainer}>
         <Text>Footer</Text>
