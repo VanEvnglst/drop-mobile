@@ -2,42 +2,23 @@ import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
   container: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+  logoContainer: {
+    flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
-    marginHorizontal: 20,
   },
   formContainer: {
-    marginTop: 300,
-    alignSelf: 'center',
-    width: '100%',
-  },
-  formInput: {
-    width: '100%',
-    alignItems: 'flex-start',
-    marginBottom: 10,
-    borderBottomWidth: 1,
-    borderColor: 'gray',
-  },
-  btnContainer: {
-    width: '100%',
-    alignItems: 'center',
-  },
-  btnStyle: {
-    height: 45,
-    width: '98%',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'blue',
+    flex: 1,
+    marginHorizontal: 20,
+    borderWidth: 1,
     borderRadius: 5,
   },
-  signUpContainer: {
-    marginTop: 20,
-    alignItems: 'center',
-  },
   footerContainer: {
-    position: 'absolute',
-    bottom: 35,
-    flexDirection: 'row',
-    alignSelf: 'center',
-  },
+    flex: 2,
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+  }
 })

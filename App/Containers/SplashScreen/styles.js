@@ -6,4 +6,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  logoStyle: {
+    fontSize: 25,
+  },
 })
