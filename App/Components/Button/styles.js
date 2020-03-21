@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import { Colors } from 'App/Theme/'
 
 export default StyleSheet.create({
   containerStyle: {
@@ -6,11 +7,12 @@ export default StyleSheet.create({
     height: 40,
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: 'blue'
+    backgroundColor: Colors.primary,
   },
   labelStyle: {
     fontSize: 18,
     textAlign: 'center',
     flex: 1,
-  }
+    color: Colors.white,
+  },
 })
