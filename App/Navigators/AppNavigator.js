@@ -3,6 +3,7 @@ import { fromRight, fadeIn } from 'react-navigation-transitions'
 
 import LoginScreen from 'App/Containers/Login/'
 import HomeScreen from 'App/Containers/HomeScreen/'
+import LaundryScreen from 'App/Containers/LaundryScreen/'
 import SplashScreen from 'App/Containers/SplashScreen/'
 
 const handleCustomTransition = ({ scenes }) => {
@@ -25,6 +26,7 @@ const StackNavigator = createStackNavigator(
     SplashScreen: SplashScreen,
     MainScreen: LoginScreen,
     HomeScreen: HomeScreen,
+    LaundryScreen: LaundryScreen,
   },
   {
     initialRouteName: 'SplashScreen',
