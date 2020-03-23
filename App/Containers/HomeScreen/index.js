@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { View, Text } from 'react-native'
 import { SafeAreaView } from 'react-navigation'
 import MapView from 'react-native-maps'
+import LinearGradient from 'react-native-linear-gradient'
 
 import Header from 'App/Components/Header'
 
@@ -17,7 +19,12 @@ const HomeScreen = () => {
   return (
     <SafeAreaView forceInset={{ top: 'never' }} style={styles.container}>
       <MapView style={styles.mapStyle} region={region}>
-        <Header />
+        <Header title="Map" />
+        <LinearGradient colors={['rgba(255,255,255, 0.4)', '#fafafa']} style={styles.bodyContainer}>
+          <View style={styles.boxContainer}>
+            <Text>Search shop here</Text>
+          </View>
+        </LinearGradient>
       </MapView>
     </SafeAreaView>
   )
