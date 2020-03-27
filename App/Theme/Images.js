@@ -5,4 +5,5 @@
 export default {
   logo: require('App/Assets/Images/TOM.png'),
   pin: require('App/Assets/Images/pin.png'),
+  shopLogo: require('App/Assets/Images/shopLogo.png'),
 }

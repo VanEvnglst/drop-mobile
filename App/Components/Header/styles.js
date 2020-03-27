@@ -1,11 +1,14 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native'
 import { Colors } from 'App/Theme/'
+
+const { height } = Dimensions.get('window')
 
 export default StyleSheet.create({
   containerStyle: {
+    backgroundColor: 'transparent',
     flexDirection: 'row',
     paddingTop: 24, // top notch height
-    height: '10%',
+    height: height * 0.1,
     justifyContent: 'center',
     alignItems: 'center',
   },

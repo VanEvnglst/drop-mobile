@@ -33,9 +33,4 @@ export default StyleSheet.create({
     shadowColor: 'grey',
     shadowOpacity: 1.0,
   },
-  pinStyle: {
-    width: 40,
-    height: 40,
-    resizeMode: 'contain',
-  },
 })

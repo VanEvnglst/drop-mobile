@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { View, Text, Image } from 'react-native'
+import { View, Text } from 'react-native'
 import { SafeAreaView } from 'react-navigation'
 import MapView from 'react-native-maps'
 import LinearGradient from 'react-native-linear-gradient'
 
 import Header from 'App/Components/Header'
-import { Images } from 'App/Theme'
+import ShopMarker from 'App/Components/ShopMarker'
 
 import styles from './styles'
 
@@ -17,23 +17,18 @@ const HomeScreen = () => {
     longitudeDelta: 0.005,
   })
 
-  const [marker] = useState([{ name: 'Liempuhan', latitude: 14.612111, longitude: 120.987809 }])
+  const [markers] = useState([
+    { name: 'Liempuhan', latitude: 14.612111, longitude: 120.987809 },
+    { name: 'Liempuhan 2', latitude: 14.610065, longitude: 120.989265 },
+  ])
 
   return (
     <SafeAreaView forceInset={{ top: 'never' }} style={styles.container}>
       <MapView style={styles.mapStyle} region={region}>
         <Header title="Map" />
-        <MapView.Marker
-          key={String(marker[0].id)}
-          coordinate={{
-            latitude: Number(marker[0].latitude),
-            longitude: Number(marker[0].longitude),
-          }}
-          title={marker.name}
-          description={'description'}
-        >
-          <Image source={Images.pin} style={styles.pinStyle} />
-        </MapView.Marker>
+        {markers.map((marker) => (
+          <ShopMarker key={marker.name} marker={marker} />
+        ))}
       </MapView>
       <LinearGradient colors={['rgba(255,255,255, 0.4)', '#fafafa']} style={styles.bodyContainer}>
         <View style={styles.boxContainer}>
