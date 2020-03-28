@@ -14,7 +14,7 @@ const ShopMarker = ({ marker }) => {
         longitude: Number(marker.longitude),
       }}
       title={marker.name}
-      description={'description'}
+      description={marker.description}
     >
       <Image source={Images.pin} style={styles.pinStyle} />
     </MapView.Marker>

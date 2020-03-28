@@ -2,9 +2,11 @@ import { combineReducers } from 'redux'
 import configureStore from './CreateStore'
 import rootSaga from 'App/Sagas'
 import { reducer as userReducer } from './UserRedux'
+import { reducer as branchesReducer } from './BranchRedux'
 
 export const mainReducer = combineReducers({
   user: userReducer,
+  branches: branchesReducer,
 })
 
 export default () => {
