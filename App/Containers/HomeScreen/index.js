@@ -17,8 +17,8 @@ const HomeScreen = ({ doGetBranches, branches }) => {
   const [region] = useState({
     latitude: 14.612111,
     longitude: 120.987809,
-    latitudeDelta: 0.005,
-    longitudeDelta: 0.005,
+    latitudeDelta: 0.002,
+    longitudeDelta: 0.002,
   })
 
   useEffect(() => {
@@ -55,9 +55,9 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-const { array, func } = PropTypes
+const { object, func } = PropTypes
 HomeScreen.propTypes = {
-  branches: array,
+  branches: object,
   doGetBranches: func,
 }
 
