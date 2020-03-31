@@ -36,7 +36,7 @@ module.exports = {
     'no-console': 1,
     'react/jsx-boolean-value': 'error',
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
+    'react-hooks/exhaustive-deps': 0,
     'no-prototype-builtins': 0,
     'react/prop-types': [
       'error',

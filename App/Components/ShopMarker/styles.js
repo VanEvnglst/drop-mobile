@@ -1,9 +1,18 @@
 import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
-  pinStyle: {
-    width: 40,
-    height: 40,
-    resizeMode: 'contain',
+  callOutContainer: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  callOutTitle: {
+    fontSize: 15,
+    textAlign: 'center',
+  },
+  callOutDescription: {
+    fontSize: 13,
+    textAlign: 'center',
   },
 })

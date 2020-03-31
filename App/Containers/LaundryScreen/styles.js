@@ -6,7 +6,9 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
   header: {
-    flex: 1,
+    height: 200,
+    borderColor: 'lightgrey',
+    borderBottomWidth: 1,
   },
   headerImage: {
     position: 'absolute',
@@ -16,15 +18,37 @@ export default StyleSheet.create({
     bottom: 0,
   },
   shopInfo: {
+    borderColor: 'lightgrey',
+    borderBottomWidth: 1,
+  },
+  titleContainerStyle: {
+    flex: 2,
+    padding: 20,
+  },
+  titleStyle: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'lightgrey',
+    fontSize: 18,
+  },
+  descriptionStyle: {
+    flex: 1,
+    fontSize: 12,
   },
   shopServices: {
     flex: 2,
-    justifyContent: 'center',
+  },
+  servicesListContainer: {
+    flex: 1,
     alignItems: 'center',
-    backgroundColor: 'lightyellow',
+  },
+  serviceContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    height: 100,
+    borderTopWidth: 1,
+    borderColor: 'lightgrey',
+    alignSelf: 'stretch',
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
   },
 })
