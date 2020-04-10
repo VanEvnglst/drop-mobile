@@ -42,7 +42,7 @@ const StackNavigator = createStackNavigator(
     LaundryScreen: LaundryScreen,
   },
   {
-    initialRouteName: 'HomeScreen',
+    initialRouteName: 'SplashScreen',
     transitionConfig: (nav) => handleCustomTransition(nav),
     headerMode: 'none',
   }

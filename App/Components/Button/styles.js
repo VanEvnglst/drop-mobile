@@ -8,6 +8,7 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: Colors.primary,
+    borderRadius: 5,
   },
   labelStyle: {
     fontSize: 18,

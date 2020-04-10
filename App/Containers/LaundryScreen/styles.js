@@ -1,4 +1,6 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native'
+
+const { width } = Dimensions.get('window')
 
 export default StyleSheet.create({
   container: {
@@ -31,10 +33,12 @@ export default StyleSheet.create({
   },
   descriptionStyle: {
     flex: 1,
+    justifyContent: 'flex-start',
     fontSize: 12,
   },
   shopServices: {
     flex: 2,
+    paddingBottom: 50,
   },
   servicesListContainer: {
     flex: 1,
@@ -50,5 +54,21 @@ export default StyleSheet.create({
     alignSelf: 'stretch',
     justifyContent: 'space-between',
     paddingHorizontal: 20,
+  },
+  buttonContainer: {
+    backgroundColor: '#fff',
+    flex: 1,
+    position: 'absolute',
+    borderColor: 'lightgrey',
+    borderTopWidth: 1,
+    bottom: 0,
+    width: width,
+    height: 100,
+    paddingHorizontal: 20,
+    paddingBottom: 35,
+    paddingTop: 15,
+    elevation: 1,
+    shadowColor: 'lightgrey',
+    shadowOpacity: 0.3,
   },
 })

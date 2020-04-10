@@ -1,36 +1,45 @@
 import React, { useState } from 'react'
 import { Text, View, ScrollView, ImageBackground, Animated } from 'react-native'
+import { SafeAreaView } from 'react-navigation'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
 import Header from 'App/Components/Header'
+import Button from 'App/Components/Button'
 
 import { Images } from 'App/Theme'
 import styles from './styles'
 
-const HEADER_MAX_HEIGHT = 200
+const IMAGE_HEADER_MAX_HEIGHT = 200
+const HEADER_MAX_HEIGHT = 120
 const HEADER_MIN_HEIGHT = 80
 const HEADER_SCROLL_DISTANCE = HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT
 
-const LaundryScreen = ({ branch }) => {
+const LaundryScreen = ({ branch, navigation }) => {
   const AnimatedImage = Animated.createAnimatedComponent(ImageBackground)
   const { name, services, description } = branch
 
   const [scrollY] = useState(new Animated.Value(0))
-  const headerHeight = scrollY.interpolate({
+  const titleContainerHeight = scrollY.interpolate({
     inputRange: [0, HEADER_SCROLL_DISTANCE],
     outputRange: [HEADER_MAX_HEIGHT, HEADER_MIN_HEIGHT],
     extrapolate: 'clamp',
   })
 
+  const headerHeight = scrollY.interpolate({
+    inputRange: [0, HEADER_SCROLL_DISTANCE],
+    outputRange: [IMAGE_HEADER_MAX_HEIGHT, HEADER_MIN_HEIGHT],
+    extrapolate: 'clamp',
+  })
+
   return (
-    <View style={styles.container}>
+    <SafeAreaView forceInset={{ top: 'never' }} style={styles.container}>
       <Animated.View style={[styles.header, { height: headerHeight }]}>
         <AnimatedImage source={Images.shopLogo} resizeMode="contain" style={[styles.headerImage]}>
           <Header />
         </AnimatedImage>
       </Animated.View>
-      <Animated.View style={[styles.shopInfo, { height: headerHeight }]}>
+      <Animated.View style={[styles.shopInfo, { height: titleContainerHeight }]}>
         <Animated.View style={[styles.titleContainerStyle]}>
           <Text style={styles.titleStyle}>{name}</Text>
           <Text style={styles.descriptionStyle}>{description.substr(0, 50)}...</Text>
@@ -62,7 +71,10 @@ const LaundryScreen = ({ branch }) => {
           </View>
         </ScrollView>
       </View>
-    </View>
+      <View style={styles.buttonContainer}>
+        <Button onClick={() => navigation.goBack()} label="Book" />
+      </View>
+    </SafeAreaView>
   )
 }
 

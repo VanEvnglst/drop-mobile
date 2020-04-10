@@ -9,9 +9,6 @@ const { store, persistor } = createStore()
 export default class App extends Component {
   render() {
     return (
-      /**
-       * @see https://github.com/reduxjs/react-redux/blob/master/docs/api/Provider.md
-       */
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <RootScreen />
